@@ -18,5 +18,103 @@ CHIP Mux8Way16 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    Not(in=sel[0], out=notsel0);
+    Not(in=sel[1], out=notsel1);
+    Not(in=sel[2], out=notsel2);
+
+    And4(a=a[0], b=notsel0, c=notsel1, out=zz0);
+    And4(a=b[0], b=sel[0], c=notsel1, out=oz0);
+    And4(a=c[0], b=notsel0, c=sel[1], out=zo0);
+    And4(a=d[0], b=sel[0], c=sel[1], out=oo0);
+    Or4(a=zz0, b=oz0, c=zo0, d=oo0, out=out[0]);
+
+    And4(a=a[1], b=notsel0, c=notsel1, out=zz1);
+    And4(a=b[1], b=sel[0], c=notsel1, out=oz1);
+    And4(a=c[1], b=notsel0, c=sel[1], out=zo1);
+    And4(a=d[1], b=sel[0], c=sel[1], out=oo1);
+    Or4(a=zz1, b=oz1, c=zo1, d=oo1, out=out[1]);
+
+    And4(a=a[2], b=notsel0, c=notsel1, out=zz2);
+    And4(a=b[2], b=sel[0], c=notsel1, out=oz2);
+    And4(a=c[2], b=notsel0, c=sel[1], out=zo2);
+    And4(a=d[2], b=sel[0], c=sel[1], out=oo2);
+    Or4(a=zz2, b=oz2, c=zo2, d=oo2, out=out[2]);
+
+    And4(a=a[3], b=notsel0, c=notsel1, out=zz3);
+    And4(a=b[3], b=sel[0], c=notsel1, out=oz3);
+    And4(a=c[3], b=notsel0, c=sel[1], out=zo3);
+    And4(a=d[3], b=sel[0], c=sel[1], out=oo3);
+    Or4(a=zz3, b=oz3, c=zo3, d=oo3, out=out[3]);
+
+    And4(a=a[4], b=notsel0, c=notsel1, out=zz4);
+    And4(a=b[4], b=sel[0], c=notsel1, out=oz4);
+    And4(a=c[4], b=notsel0, c=sel[1], out=zo4);
+    And4(a=d[4], b=sel[0], c=sel[1], out=oo4);
+    Or4(a=zz4, b=oz4, c=zo4, d=oo4, out=out[4]);
+
+    And4(a=a[5], b=notsel0, c=notsel1, out=zz5);
+    And4(a=b[5], b=sel[0], c=notsel1, out=oz5);
+    And4(a=c[5], b=notsel0, c=sel[1], out=zo5);
+    And4(a=d[5], b=sel[0], c=sel[1], out=oo5);
+    Or4(a=zz5, b=oz5, c=zo5, d=oo5, out=out[5]);
+
+    And4(a=a[6], b=notsel0, c=notsel1, out=zz6);
+    And4(a=b[6], b=sel[0], c=notsel1, out=oz6);
+    And4(a=c[6], b=notsel0, c=sel[1], out=zo6);
+    And4(a=d[6], b=sel[0], c=sel[1], out=oo6);
+    Or4(a=zz6, b=oz6, c=zo6, d=oo6, out=out[6]);
+
+    And4(a=a[7], b=notsel0, c=notsel1, out=zz7);
+    And4(a=b[7], b=sel[0], c=notsel1, out=oz7);
+    And4(a=c[7], b=notsel0, c=sel[1], out=zo7);
+    And4(a=d[7], b=sel[0], c=sel[1], out=oo7);
+    Or4(a=zz7, b=oz7, c=zo7, d=oo7, out=out[7]);
+
+    And4(a=a[8], b=notsel0, c=notsel1, out=zz8);
+    And4(a=b[8], b=sel[0], c=notsel1, out=oz8);
+    And4(a=c[8], b=notsel0, c=sel[1], out=zo8);
+    And4(a=d[8], b=sel[0], c=sel[1], out=oo8);
+    Or4(a=zz8, b=oz8, c=zo8, d=oo8, out=out[8]);
+
+    And4(a=a[9], b=notsel0, c=notsel1, out=zz9);
+    And4(a=b[9], b=sel[0], c=notsel1, out=oz9);
+    And4(a=c[9], b=notsel0, c=sel[1], out=zo9);
+    And4(a=d[9], b=sel[0], c=sel[1], out=oo9);
+    Or4(a=zz9, b=oz9, c=zo9, d=oo9, out=out[9]);
+
+    And4(a=a[10], b=notsel0, c=notsel1, out=zz10);
+    And4(a=b[10], b=sel[0], c=notsel1, out=oz10);
+    And4(a=c[10], b=notsel0, c=sel[1], out=zo10);
+    And4(a=d[10], b=sel[0], c=sel[1], out=oo10);
+    Or4(a=zz10, b=oz10, c=zo10, d=oo10, out=out[10]);
+
+    And4(a=a[11], b=notsel0, c=notsel1, out=zz11);
+    And4(a=b[11], b=sel[0], c=notsel1, out=oz11);
+    And4(a=c[11], b=notsel0, c=sel[1], out=zo11);
+    And4(a=d[11], b=sel[0], c=sel[1], out=oo11);
+    Or4(a=zz11, b=oz11, c=zo11, d=oo11, out=out[11]);
+
+    And4(a=a[12], b=notsel0, c=notsel1, out=zz12);
+    And4(a=b[12], b=sel[0], c=notsel1, out=oz12);
+    And4(a=c[12], b=notsel0, c=sel[1], out=zo12);
+    And4(a=d[12], b=sel[0], c=sel[1], out=oo12);
+    Or4(a=zz12, b=oz12, c=zo12, d=oo12, out=out[12]);
+
+    And4(a=a[13], b=notsel0, c=notsel1, out=zz13);
+    And4(a=b[13], b=sel[0], c=notsel1, out=oz13);
+    And4(a=c[13], b=notsel0, c=sel[1], out=zo13);
+    And4(a=d[13], b=sel[0], c=sel[1], out=oo13);
+    Or4(a=zz13, b=oz13, c=zo13, d=oo13, out=out[13]);
+
+    And4(a=a[14], b=notsel0, c=notsel1, out=zz14);
+    And4(a=b[14], b=sel[0], c=notsel1, out=oz14);
+    And4(a=c[14], b=notsel0, c=sel[1], out=zo14);
+    And4(a=d[14], b=sel[0], c=sel[1], out=oo14);
+    Or4(a=zz14, b=oz14, c=zo14, d=oo14, out=out[14]);
+
+    And4(a=a[15], b=notsel0, c=notsel1, out=zz15);
+    And4(a=b[15], b=sel[0], c=notsel1, out=oz15);
+    And4(a=c[15], b=notsel0, c=sel[1], out=zo15);
+    And4(a=d[15], b=sel[0], c=sel[1], out=oo15);
+    Or4(a=zz15, b=oz15, c=zo15, d=oo15, out=out[15]);
 }
